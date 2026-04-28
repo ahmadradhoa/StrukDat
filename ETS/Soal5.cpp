@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-string layani;
-
 void tambahMahasiswa(queue<string>& q, string nama){
     q.push(nama);
     cout << "Mahasiswa " << nama << " berhasil mengambil nomor antrian\n";
