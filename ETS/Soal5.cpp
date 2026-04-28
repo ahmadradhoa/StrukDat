@@ -36,16 +36,34 @@ void cekAntrian(queue<string> q){
 
 int main(){
     queue<string> q;
-    string s;
-    while(cin >> s){
-        if(s == "layani"){
-            layaniMahasiswa(q);
+    int n;
+    while(true){
+        cout << "===================================\n";
+        cout << "1. Ambil Antrian (Tambah Mahasiswa)\n";
+        cout << "2. Panggil Loket (layani Mahasiswa)\n";
+        cout << "3. Tampilkan Status Antrian\n";
+        cout << "4. Keluar Program\n";
+        cout << "===================================\n";
+        cout << "Pilih menu (1-4)\n";
+        cin >> n;
+        if(n == 1){
+            string s;
+            cout << "Masukkan Nama: ";
+            cin >> s;
+            tambahMahasiswa(q, s);
+            cout << "\n";
         }
-        else if(s == "tampilkan"){
+        else if(n == 2){
+            layaniMahasiswa(q);
+            cout << "\n";
+        }
+        else if(n == 3){
             cekAntrian(q);
+            cout << "\n";
         }
         else {
-            tambahMahasiswa(q, s);
+            cout << "Program selesai\n";
+            break;
         }
     }
 
