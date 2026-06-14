@@ -68,13 +68,13 @@ int main(){
 
     int n;
     cout << "=== SISTEM NILAI UJIAN MAHASISWA ===\n";
-    cout << "Jumlah siswa : ";
+    cout << "Jumlah mahasiswa : ";
     cin >> n;
 
     cout << "\nMasukkan nilai mahasiswa:\n";
     for(int i = 1; i <= n; i++){
         int nilai;
-        cout << "Nilai siswa ke-" << i << " : ";
+        cout << "Nilai mahasiswa ke-" << i << " : ";
         cin >> nilai;
 
         root = insert(root, nilai);
